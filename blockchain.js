@@ -33,11 +33,13 @@ class Blockchain {
         for(let i = 1 ; i < chain.length ; i++){
             const {timestamp , prevHash , hash , data , nonce , difficulty} = chain[i];
             const realLastHash = chain[i-1].hash;
+            const lastDifficulty = chain[i - 1].difficulty;
 
             if(prevHash !== realLastHash) return false;
 
             const validatedHash = cryptoHash(timestamp , prevHash , data , nonce , difficulty);
             if(validatedHash !== hash) return false;
+            if(Math.abs(lastDifficulty - difficulty) > 1) return false;
         }
         return true; 
     }
