@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index1.js",
     "dev": "nodemon index1.js",
-    "dev-peer" : "cross-env GENERATE_PEER_PORT='true' nodemon index1.js"
+    "dev-peer": "cross-env GENERATE_PEER_PORT='true' nodemon index1.js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +16,8 @@
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "hex-to-binary": "^1.0.1",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
